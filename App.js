@@ -1,39 +1,40 @@
 import  React from "react"
-import { Image, ScrollView, Text } from "react-native"
+import { FlatList, StyleSheet, Text, View } from "react-native"
 
-const logo = {
-  uri: 'https://reactnative.dev/img/tiny_logo.png',
-  width: 64,
-  height: 64
-};
+const style = StyleSheet.create ({
+  container: {
+    flex: 1,
+    paddingTop: 22
+  },
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44
+  }
+})
 
-const App = () => (
-  <ScrollView>
-    <Text style={{ fontSize: 96 }}>Scroll me pls</Text>
-    <Image source={logo} />
-    <Image source={logo}/>
-    <Image source={logo}/>
-    <Image source={logo}/>
-    <Image source={logo}/>
-    <Text style={{ fontSize: 96 }}>Scroll me pls</Text>
-    <Image source={logo}/>
-    <Image source={logo}/>
-    <Image source={logo}/>
-    <Image source={logo}/>
-    <Image source={logo}/>
-    <Text style={{ fontSize: 96 }}>Scroll me pls</Text>
-    <Image source={logo}/>
-    <Image source={logo}/>
-    <Image source={logo}/>
-    <Image source={logo}/>
-    <Image source={logo}/>
-    <Text style={{ fontSize: 96 }}>Scroll me pls</Text>
-    <Image source={logo}/>
-    <Image source={logo}/>
-    <Image source={logo}/>
-    <Image source={logo}/>
-    <Image source={logo}/>
-  </ScrollView>
-)
-
-export default App
+const FlatListBasics = () => {
+  return (
+    <View style={style.container}>
+      <FlatList
+        data={[
+          {key: 'Devin'},
+          {key: 'Aru'},
+          {key: 'Den'},
+          {key: 'Donn'},
+          {key: 'Dann'},
+          {key: 'Deon'},
+          {key: 'Duin'},
+          {key: 'Dionn'},
+          {key: 'Dras'},
+          {key: 'Dreno'},
+          {key: 'Drako'},
+          {key: 'Derko'},
+          {key: 'Draco'},
+        ]}
+        renderItem={({item}) => <Text style={style.item}>{item.key}</Text>}
+      />
+    </View>
+  )
+}
+export default FlatListBasics
