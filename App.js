@@ -1,14 +1,14 @@
 import  React from "react"
 import { FlatList, StyleSheet, Text, View, SectionList } from "react-native"
 
-const FixedDimensionBasics =() => {
+const FlexDimensionBasics = () => {
   return (
-    <View>
-      <View style= {{width: 50, height: 50, backgroundColor: 'powderblue'}} />
-      <View style= {{width: 100, height: 100, backgroundColor: 'skyblue'}} />
-      <View style= {{width: 500, height: 500, backgroundColor: 'steelblue'}} />
+    <View style={{flex: 1}}>
+      <View style={{flex: 1, backgroundColor: 'papayawhip'}}/>
+      <View style={{flex: 2, backgroundColor: 'peachpuff'}}/>
+      <View style={{flex: 3, backgroundColor: 'peru'}}/>
     </View>
   )
 }
 
-export default FixedDimensionBasics
+export default FlexDimensionBasics
