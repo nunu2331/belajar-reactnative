@@ -6,13 +6,19 @@ export default class App extends Component {
     return (
       <View style={{flex: 1}}>
         <View style={{flex: 1, backgroundColor: 'white'}}>
-          <View style={{ marginHorizontal: 10, flexDirection: "row"}} >
-            <View style={{position: "relative", marginTop: 13}}  >
-              <TextInput placeholder= "Laper Bos?" style={{ fontSize: 13, borderWidth: 1, borderColor: '#E8E8E8', borderRadius: 25, paddingLeft: 40, paddingRight: 25}}></TextInput>
-              <Image style={{ position: 'absolute',top: 14, left: 12}} source={require('./icon/search.png')}/>
+          <View style={{ marginHorizontal: 17, flexDirection: "row"}} >
+            <View style={{flex: 1 , position: "relative", marginTop: 13}}  >
+              <TextInput placeholder= "Laper Bos?" style={{ fontSize: 13, borderWidth: 1, borderColor: '#E8E8E8', borderRadius: 25, paddingLeft: 40, paddingRight: 20, marginRight: 13}}></TextInput>
+              <Image style={{ position: 'absolute', left: 12, top: 13}} source={require('./icon/search.png')}/>
             </View>
-            <View>
-              <Image source={require('./icon/promo.png')}></Image>
+            <View style={{alignContent: "center", justifyContent: "center"}}>
+              <Image style={{marginTop: 10, marginHorizontal: 3}} source={require('./icon/promo.png')}></Image>
+            </View> 
+          </View>
+          <View>
+            <View style={{backgroundColor: 'cornflowerblue', marginHorizontal: 17, flexDirection: "row", justifyContent: "space-between"}}>
+              <Image style={{width:1600/16, height: 353/16}} resizeMode='contain' source={require('./icon/gopay.png')}></Image>
+              <Text>Rp 100.000</Text>
             </View>
           </View>
         </View>
