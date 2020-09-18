@@ -1,11 +1,11 @@
 import  React, {Component, version} from "react"
-import {Platform, FlatList, StyleSheet, Text, View, TextInput, Image } from "react-native"
+import {Platform, FlatList, StyleSheet, Text, View, TextInput, Image, ScrollView } from "react-native"
 
 export default class App extends Component {
   render (){
     return (
       <View style={{flex: 1}}>
-        <View style={{flex: 1, backgroundColor: 'white'}}>
+        <ScrollView style={{flex: 1, backgroundColor: 'white'}}>
           <View style={{ marginHorizontal: 17, flexDirection: "row"}} >
             <View style={{flex: 1 , position: "relative", marginTop: 13}}  >
               <TextInput placeholder= "Laper Bos?" style={{ fontSize: 13, borderWidth: 1, borderColor: '#E8E8E8', borderRadius: 25, paddingLeft: 40, paddingRight: 20, marginRight: 13}}></TextInput>
@@ -39,61 +39,71 @@ export default class App extends Component {
               </View>
             </View>
           </View>
-        <View style={{flexDirection: "row", flexWrap: "wrap", marginHorizontal: 0, marginTop: 18}}>
-          <View style={{flexDirection: "row", justifyContent: "space-between", width: '100%', marginBottom: 18 }}>
-            <View style={{width:'25%', alignItems: 'center'}}>
-              <View style={{width: 58, height: 58, borderWidth: 1, borderColor: '#EFEFEF', borderRadius: 18, justifyContent: "center", alignItems: "center"}}>
-                <Image style={{width: 34, height: 34}} source={require('./icon/goride.png')}></Image>  
+          <View style={{flexDirection: "row", flexWrap: "wrap", marginHorizontal: 0, marginTop: 18}}>
+            <View style={{flexDirection: "row", justifyContent: "space-between", width: '100%', marginBottom: 18 }}>
+              <View style={{width:'25%', alignItems: 'center'}}>
+                <View style={{width: 58, height: 58, borderWidth: 1, borderColor: '#EFEFEF', borderRadius: 18, justifyContent: "center", alignItems: "center"}}>
+                  <Image style={{width: 34, height: 34}} source={require('./icon/goride.png')}></Image>  
+                </View>
+                <Text style={{fontSize: 11, fontWeight: "bold", textAlign: "center", marginTop: 6}}>GO-RIDE</Text>
               </View>
-              <Text style={{fontSize: 11, fontWeight: "bold", textAlign: "center", marginTop: 6}}>GO-RIDE</Text>
+              <View style={{width:'25%', alignItems: 'center'}}>
+                <View style={{width: 58, height: 58, borderWidth: 1, borderColor: '#EFEFEF', borderRadius: 18, justifyContent: "center", alignItems: "center"}}>
+                  <Image style={{width: 34, height: 34}} source={require('./icon/gocar.png')}></Image>  
+                </View>
+                <Text style={{fontSize: 11, fontWeight: "bold", textAlign: "center", marginTop: 6}}>GO-CAR</Text>
+              </View>
+              <View style={{width:'25%', alignItems: 'center'}}>
+                <View style={{width: 58, height: 58, borderWidth: 1, borderColor: '#EFEFEF', borderRadius: 18, justifyContent: "center", alignItems: "center"}}>
+                  <Image style={{width: 34, height: 34}} source={require('./icon/gotaxi.png')}></Image>  
+                </View>
+                <Text style={{fontSize: 11, fontWeight: "bold", textAlign: "center", marginTop: 6}}>GO-TAXI</Text>
+              </View>
+              <View style={{width:'25%', alignItems: 'center'}}>
+                <View style={{width: 58, height: 58, borderWidth: 1, borderColor: '#EFEFEF', borderRadius: 18, justifyContent: "center", alignItems: "center"}}>
+                  <Image style={{width: 34, height: 34}} source={require('./icon/gosend.png')}></Image>  
+                </View>
+                <Text style={{fontSize: 11, fontWeight: "bold", textAlign: "center", marginTop: 6}}>GO-SEND</Text>
+              </View>
             </View>
-            <View style={{width:'25%', alignItems: 'center'}}>
-              <View style={{width: 58, height: 58, borderWidth: 1, borderColor: '#EFEFEF', borderRadius: 18, justifyContent: "center", alignItems: "center"}}>
-                <Image style={{width: 34, height: 34}} source={require('./icon/gocar.png')}></Image>  
+            <View style={{flexDirection: "row", justifyContent: "space-between", width: '100%' }}>
+              <View style={{width:'25%', alignItems: 'center'}}>
+                <View style={{width: 58, height: 58, borderWidth: 1, borderColor: '#EFEFEF', borderRadius: 18, justifyContent: "center", alignItems: "center"}}>
+                  <Image style={{width: 34, height: 34}} source={require('./icon/godeals.png')}></Image>  
+                </View>
+                <Text style={{fontSize: 11, fontWeight: "bold", textAlign: "center", marginTop: 6}}>GO-DEALS</Text>
               </View>
-              <Text style={{fontSize: 11, fontWeight: "bold", textAlign: "center", marginTop: 6}}>GO-CAR</Text>
-            </View>
-            <View style={{width:'25%', alignItems: 'center'}}>
-              <View style={{width: 58, height: 58, borderWidth: 1, borderColor: '#EFEFEF', borderRadius: 18, justifyContent: "center", alignItems: "center"}}>
-                <Image style={{width: 34, height: 34}} source={require('./icon/gotaxi.png')}></Image>  
+              <View style={{width:'25%', alignItems: 'center'}}>
+                <View style={{width: 58, height: 58, borderWidth: 1, borderColor: '#EFEFEF', borderRadius: 18, justifyContent: "center", alignItems: "center"}}>
+                  <Image style={{width: 34, height: 34}} source={require('./icon/gopulsa.png')}></Image>  
+                </View>
+                <Text style={{fontSize: 11, fontWeight: "bold", textAlign: "center", marginTop: 6}}>GO-PULSA</Text>
               </View>
-              <Text style={{fontSize: 11, fontWeight: "bold", textAlign: "center", marginTop: 6}}>GO-TAXI</Text>
-            </View>
-            <View style={{width:'25%', alignItems: 'center'}}>
-              <View style={{width: 58, height: 58, borderWidth: 1, borderColor: '#EFEFEF', borderRadius: 18, justifyContent: "center", alignItems: "center"}}>
-                <Image style={{width: 34, height: 34}} source={require('./icon/gosend.png')}></Image>  
+              <View style={{width:'25%', alignItems: 'center'}}>
+                <View style={{width: 58, height: 58, borderWidth: 1, borderColor: '#EFEFEF', borderRadius: 18, justifyContent: "center", alignItems: "center"}}>
+                  <Image style={{width: 34, height: 34}} source={require('./icon/gofood.png')}></Image>  
+                </View>
+                <Text style={{fontSize: 11, fontWeight: "bold", textAlign: "center", marginTop: 6}}>GO-FOOD</Text>
               </View>
-              <Text style={{fontSize: 11, fontWeight: "bold", textAlign: "center", marginTop: 6}}>GO-SEND</Text>
+              <View style={{width:'25%', alignItems: 'center'}}>
+                <View style={{width: 58, height: 58, borderWidth: 1, borderColor: '#EFEFEF', borderRadius: 18, justifyContent: "center", alignItems: "center"}}>
+                  <Image style={{width: 34, height: 34}} source={require('./icon/more.png')}></Image>  
+                </View>
+                <Text style={{fontSize: 11, fontWeight: "bold", textAlign: "center", marginTop: 6}}>MORE</Text>
+              </View>
             </View>
           </View>
-          <View style={{flexDirection: "row", justifyContent: "space-between", width: '100%' }}>
-            <View style={{width:'25%', alignItems: 'center'}}>
-              <View style={{width: 58, height: 58, borderWidth: 1, borderColor: '#EFEFEF', borderRadius: 18, justifyContent: "center", alignItems: "center"}}>
-                <Image style={{width: 34, height: 34}} source={require('./icon/godeals.png')}></Image>  
-              </View>
-              <Text style={{fontSize: 11, fontWeight: "bold", textAlign: "center", marginTop: 6}}>GO-DEALS</Text>
+          <View style={{height: 18, backgroundColor:'#F2F2F4', marginTop: 20}}></View>
+          <View style={{paddingTop: 16, paddingHorizontal: 17}}>
+            <View>
+              <Image source={require('./dummy/hoggwarts.jpg')} style={{height: 170, width:'100%', borderRadius: 6}}/>
             </View>
-            <View style={{width:'25%', alignItems: 'center'}}>
-              <View style={{width: 58, height: 58, borderWidth: 1, borderColor: '#EFEFEF', borderRadius: 18, justifyContent: "center", alignItems: "center"}}>
-                <Image style={{width: 34, height: 34}} source={require('./icon/gopulsa.png')}></Image>  
-              </View>
-              <Text style={{fontSize: 11, fontWeight: "bold", textAlign: "center", marginTop: 6}}>GO-PULSA</Text>
-            </View>
-            <View style={{width:'25%', alignItems: 'center'}}>
-              <View style={{width: 58, height: 58, borderWidth: 1, borderColor: '#EFEFEF', borderRadius: 18, justifyContent: "center", alignItems: "center"}}>
-                <Image style={{width: 34, height: 34}} source={require('./icon/gofood.png')}></Image>  
-              </View>
-              <Text style={{fontSize: 11, fontWeight: "bold", textAlign: "center", marginTop: 6}}>GO-FOOD</Text>
-            </View>
-            <View style={{width:'25%', alignItems: 'center'}}>
-              <View style={{width: 58, height: 58, borderWidth: 1, borderColor: '#EFEFEF', borderRadius: 18, justifyContent: "center", alignItems: "center"}}>
-                <Image style={{width: 34, height: 34}} source={require('./icon/more.png')}></Image>  
-              </View>
-              <Text style={{fontSize: 11, fontWeight: "bold", textAlign: "center", marginTop: 6}}>MORE</Text>
+            <View>
+              <Text>GO-KORAN</Text>
+              <Text>Kastel Howgwarts dilelang, Pertarungan apa yang akan terjadi?</Text>
             </View>
           </View>
-        </View>
-        </View>
+        </ScrollView>
         <View style={{height: 60, backgroundColor: 'white', flexDirection: "row"}}>
           <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
             <View style={{width: 26, height: 26}}>
