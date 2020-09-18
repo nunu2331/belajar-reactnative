@@ -1,5 +1,5 @@
 import  React, {Component, version} from "react"
-import {Platform, FlatList, StyleSheet, Text, View, TextInput, Image, ScrollView } from "react-native"
+import { fontFamily,Platform, FlatList, StyleSheet, Text, View, TextInput, Image, ScrollView } from "react-native"
 
 export default class App extends Component {
   render (){
@@ -95,12 +95,14 @@ export default class App extends Component {
           </View>
           <View style={{height: 18, backgroundColor:'#F2F2F4', marginTop: 20}}></View>
           <View style={{paddingTop: 16, paddingHorizontal: 17}}>
-            <View>
+            <View style={{position:"relative"}}>
               <Image source={require('./dummy/hoggwarts.jpg')} style={{height: 170, width:'100%', borderRadius: 6}}/>
+              <View style={{width: '100%', height: '100%', position: "absolute",top:0,left:0, backgroundColor:'black', opacity: 0.2, borderRadius: 6}}></View>
+              <Image source={require('./logo/gojek1.png')} style={{height: 15, width:70,position: "absolute", top: 16, left:16}}/>
             </View>
-            <View>
-              <Text>GO-KORAN</Text>
-              <Text>Kastel Howgwarts dilelang, Pertarungan apa yang akan terjadi?</Text>
+            <View style={{paddingTop: 16, paddingBottom: 20}}>
+              <Text style={{fontFamily: 'CITCAT', fontWeight: 'bold', color:'#1C1C1C', fontSize: 16}}>GO-KORAN</Text>
+              <Text style={{fontSize: 14, fontWeight: 'normal', color:'#7A7A7A'}}>Kastel Howgwarts dilelang, Pertarungan apa yang akan terjadi?</Text>
             </View>
           </View>
         </ScrollView>
